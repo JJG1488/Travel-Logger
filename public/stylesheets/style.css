@@ -3,6 +3,12 @@ form.login {
   margin-top: 50px;
 }
 
+header{
+  font-family: 'Abril Fatface', cursive !important;
+  text-align: center;
+  font-size: xx-large;
+}
+
 h1{
   font-family: 'Abril Fatface', cursive !important;
 }
@@ -24,6 +30,16 @@ li{
   border: black solid 2px;
   float: left;
 }
+
+.carousel-inner{
+border-top: #E64D2A solid 5px ;
+border-bottom: #E64D2A solid 5px ;
+}
+
+.info{
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 
 /* 
 Colors
