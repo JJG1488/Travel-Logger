@@ -2,3 +2,34 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+h1{
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+.resultbox h3{
+  color: white;
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+li{
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.resultbox{
+  background-color: #E64D2A !important;
+  color: white !important;
+  padding: 20px;
+  margin: 10px;
+  border: black solid 2px;
+  float: left;
+}
+
+/* 
+Colors
+#E64D2A;
+#EEB646;
+#192E50;
+#AE9E63;
+#437251;
+*/
