@@ -4,22 +4,26 @@ form.login {
 }
 
 header{
-  font-family: 'Abril Fatface', cursive !important;
+  font-family: 'Abril Fatface', cursive;
   text-align: center;
   font-size: xx-large;
 }
 
+.login{
+  font-family: 'Open Sans', sans-serif;
+  float: right;
+}
 h1{
-  font-family: 'Abril Fatface', cursive !important;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .resultbox h3{
   color: white;
-  font-family: 'Abril Fatface', cursive !important;
+  font-family: 'Abril Fatface', cursive;
 }
 
 li{
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .resultbox{
@@ -37,9 +41,30 @@ border-bottom: #E64D2A solid 5px ;
 }
 
 .info{
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.contact{
+border-bottom: 2px solid #E64D2A;
+padding: 5px;
+}
+
+.thumbs{
+  border-bottom: 2px solid #E64D2A;
+  padding: 5px;
+
+}
+
+.footer {
+  background-color: #E64D2A;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
 /* 
 Colors
