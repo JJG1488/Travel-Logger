@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   jsFiddle will insert css and js -->
+  <!-- </head>
+  <body>
+    <div id="map"></div>
+    Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html> --> 
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Traveler</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>Welcome What would you like to do? Eat, Outdoor Activities, Indoor Activities, LandMarks, Attractions?</header>
+<form class="form-inline" action="/action_page.php">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<div class="container">
+    <div class="row"> 
+    <div class="col-sm-3" class="resultbox"> Recommendations 
+        <ol>
+            <li>recommended</li>
+            <li>recommended</li>
+            <li>recommended</li>
+            <li>recommended</li>
+            <li>recommended</li>
+        </ol>
+    </div>
+    <div class="col-sm-9"> <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64&q=Space+Needle,Seattle+WA">
+      </iframe> google </div>
+   
+</div>
+    <div class="row"> 
+     <div class="col-sm-"> Recent Search Here</div>
+</div>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/display.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64&callback=initMap"type="text/javascript"></script>
+</body>
+
+
+
+</html> 
