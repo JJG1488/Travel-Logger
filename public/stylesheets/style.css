@@ -3,13 +3,33 @@ form.login {
   margin-top: 50px;
 }
 
+#second {
+  float: left;
+  max-width: 20%;
+}
+
+#map{
+  max-width: 600%;
+  
+}
+
+#first {
+  max-width: 100%;
+}
+
 header{
+  max-width: 100%;
+  color: black;
   font-family: 'Abril Fatface', cursive !important;
   text-align: center;
   font-size: xx-large;
+  background-color: #E64D2A;
+  border: black solid 2px;
 }
 
 h1{
+  color: black;
+  font-size: 30px;
   font-family: 'Abril Fatface', cursive !important;
 }
 
@@ -26,7 +46,6 @@ li{
   background-color: #E64D2A !important;
   color: white !important;
   padding: 20px;
-  margin: 10px;
   border: black solid 2px;
   float: left;
 }

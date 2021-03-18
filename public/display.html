@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Traveler</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
+    <title>Traveler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+        }
+    </script>
 </head>
+</head>
+
 <body>
-<header>Welcome What would you like to do? Eat, Outdoor Activities, Indoor Activities, LandMarks, Attractions?</header>
-<div class="container">
-    <div class="row"> 
-    <div class="col-sm-3 resultbox"> 
-        <h1>Recommendations</h1>
-        <h3>Sample</h3>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. </li>
-        <h3>Sample</h3>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. </li>
-        <h3>Sample</h3>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. </li>
-        <h3>Sample</h3>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. </li>
- </div>
-    <div class="col-sm-9" id="google">  google 
-        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-src="https://www.google.com/maps/embed/v1/search?q=Michigan&key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64
-"></iframe>
-<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-src="https://www.google.com/maps/embed/v1/view?center=...&zoom=...&key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64"></iframe>
+    
+  
+    <div id="first" class="container">
+        <header>Welcome What would you like to do? Eat, Outdoor Activities, Indoor Activities, LandMarks, Attractions?
+        </header>
     </div>
-</div>
-    <div class="row"> 
-     <div class="col-sm-3 resultbox"> Recent Search Here</div>
-</div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/display.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64&callback=initMap"type="text/javascript"></script>
+    <div id="second" class="container">
+        <div class="row">
+            <div class="col-sm- resultbox">
+                <h1>Recommendations</h1>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+            </div>
+           
+            <!-- <div class="col-sm-9" id="google"> google
+            
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-sm- resultbox">
+                <h1>Recent Searchs</h1>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+                <h3>Sample</h3>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. </li>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoJuO27asB-7IBy5L8pntYT_q8Dzcco64&callback=initMap&libraries=&v=weekly"
+        async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/display.js"></script>
 </body>
+
 </html>
