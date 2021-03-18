@@ -1,2 +1,2 @@
-CREATE DATABASE passport_demo;
-USE passport_demo;
+CREATE DATABASE travel_db;
+USE travel_db;
