@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: "root",
-    password: process.env.MySQL,
+    password: process.env.PWPASSWORD,
     database: "travel_db",
     host: "127.0.0.1",
     dialect: "mysql"
