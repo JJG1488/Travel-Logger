@@ -2,59 +2,63 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-
+#second {
+  float: left;
+  max-width: 20%;
+}
+#map{
+  max-width: 600%;
+}
+#first {
+  max-width: 100%;
+}
 header{
-  font-family: 'Abril Fatface', cursive;
+  max-width: 100%;
+  color: black;
+  font-family: 'Abril Fatface', cursive !important;
   text-align: center;
   font-size: xx-large;
+  background-color: #E64D2A;
+  border: black solid 2px;
 }
-
 .login{
   font-family: 'Open Sans', sans-serif;
   float: right;
 }
 h1{
-  font-family: 'Abril Fatface', cursive;
+  color: black;
+  font-size: 30px;
+  font-family: 'Abril Fatface', cursive !important;
 }
-
 .resultbox h3{
   color: white;
   font-family: 'Abril Fatface', cursive;
 }
-
 li{
   font-family: 'Open Sans', sans-serif;
 }
-
 .resultbox{
   background-color: #E64D2A !important;
   color: white !important;
   padding: 20px;
-  margin: 10px;
   border: black solid 2px;
   float: left;
 }
-
 .carousel-inner{
 border-top: #E64D2A solid 5px ;
 border-bottom: #E64D2A solid 5px ;
 }
-
 .info{
   font-family: 'Open Sans', sans-serif;
 }
-
 .contact{
 border-bottom: 2px solid #E64D2A;
 padding: 5px;
 }
-
 .thumbs{
   border-bottom: 2px solid #E64D2A;
   padding: 5px;
-
 }
-
 .footer {
   background-color: #E64D2A;
   color: white;
@@ -65,12 +69,3 @@ padding: 5px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
-
-/* 
-Colors
-#E64D2A;
-#EEB646;
-#192E50;
-#AE9E63;
-#437251;
-*/
