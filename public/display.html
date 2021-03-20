@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Traveler</title>
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="stylesheets/style.css" rel="stylesheet">
     <style type="text/css">
         /* Always set the map height explicitly to define the size of the div
@@ -32,11 +34,16 @@
         }
     </script>
 </head>
-</head>
+
+
 <body>
+    
+    <header>Welcome What would you like to do?  Outdoor Activities, Eat, Indoor Activities, LandMarks, Attractions?
+        <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </header>
     <div id="first" class="container">
-        <header>Welcome What would you like to do? Eat, Outdoor Activities, Indoor Activities, LandMarks, Attractions?
-        </header>
+       
     </div>
     <div id="second" class="container">
         <div class="row">
@@ -63,13 +70,14 @@
                     dolore
                     magna aliqua. </li>
             </div>
+           
             <!-- <div class="col-sm-9" id="google"> google
+            
             </div> -->
         </div>
         <div class="row">
-            <div class="col-sm- resultbox">
+            <div class="col-sm- resultbox" id="recent">
                 <h1>Recent Searchs</h1>
-                <h3>Sample</h3>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore
@@ -99,4 +107,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/display.js"></script>
 </body>
+
 </html>
