@@ -1,3 +1,5 @@
+
+//Add Search History to Local Storage
 function addToLocalStorage(save_value) {
   let search_key = "search_history";
   let search_history = localStorage.getItem(search_key);
@@ -16,6 +18,7 @@ function addToLocalStorage(save_value) {
   }
 }
 
+//Show Search History
 function showPastHistory() {
   $("#recent").empty();
 
@@ -31,6 +34,7 @@ function showPastHistory() {
     }
   }
 }
+
 
 
 $(document).ready(() => {
@@ -72,7 +76,7 @@ $(document).ready(() => {
       });
   }
 
-  // Show Search History
+  // Display Search History on Load
   showPastHistory();
   $("#submit_search").click((e) => {
     e.preventDefault();
@@ -82,13 +86,14 @@ $(document).ready(() => {
     // $("#search").val("");
   });
 
-  $(document).on("click", ".cityclick", function () {
-    let city = $(this).attr("value");
-    addToLocalStorage(city);
-    showPastHistory();
-    $(".cityclick").val("");
-    console.log(city);
-  });
+  ////Clicking on recent search buttons
+  // $(document).on("click", ".cityclick", function () {
+  //   let city = $(this).attr("value");
+  //   addToLocalStorage(city);
+  //   showPastHistory();
+  //   $(".cityclick").val("");
+  //   console.log(city);
+  // });
 });
 
 
