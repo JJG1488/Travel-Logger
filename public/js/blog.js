@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", e => {
         "Content-Type": "application/json"
       }
     })
-      .then(response => {
-        console.log(response);
-        response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         console.log("Success in getting posts:", data);
         posts = data;
@@ -141,6 +138,7 @@ document.addEventListener("DOMContentLoaded", e => {
     messageH2.style.textAlign = "center";
     messageH2.style.marginTop = "50px";
     messageH2.innerHTML =
+      // eslint-disable-next-line quotes
       'No posts yet for this category. <br>Click <a href="/cms">here</a> to make a new post.';
     blogContainer.appendChild(messageH2);
   };

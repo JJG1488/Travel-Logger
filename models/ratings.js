@@ -1,7 +1,7 @@
 // Sequelize (capital) references the standard library
-const Sequelize = require("sequelize");
+// const Sequelize = require("sequelize");
 // sequelize (lowercase) references my connection to the DB.
-const sequelize = require("../config/config");
+// const sequelize = require("../config/config");
 
 // const sequelize = require("../models/index").sequelize;
 
@@ -12,19 +12,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1],
-      },
+        len: [1]
+      }
     },
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [1],
-      },
+        len: [1]
+      }
     },
     category: {
       type: DataTypes.STRING,
-      defaultValue: 'Personal',
+      defaultValue: "Personal"
     },
     nameOfPlace: {
       type: DataTypes.STRING
@@ -50,10 +50,8 @@ module.exports = (sequelize, DataTypes) => {
   });
   // Ratings.sync();
   return Ratings;
-  
 };
 // Syncs with DB
-
 
 // Makes the Ratings Model available for other files (will also create a table)
 // module.exports = Ratings;
