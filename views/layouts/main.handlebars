@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="public/stylesheets/style.css" type="text/css" />
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
 		<title>Traveler</title>
-		<script src="/public/stylesheets/style.css"></script>
+		<script src="/stylesheets/style.css"></script>
+		<script>
+			var api_key = process.env.API_KEY;
+		</script>
 	</head>
+	
 	<body>
 		{{{ body }}}
 	</body>
