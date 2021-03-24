@@ -4,11 +4,24 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 require('process');
+const fetch = require("node-fetch");
+// const convert = require("xml-js");
+// const rateLimit = require("express-rate-limit");
+// const limiter = rateLimit({
+// 	windowMs: 1000, // 1 second
+// 	max: 1, // limit each IP to 1 requests per windowMs
+// })
+
+// //  apply to all requests
+// app.use(limiter)
+
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 require("dotenv").config();
+
+// console.log(process.env);
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
