@@ -9,7 +9,8 @@ form.login {
 }
 
 #map{
-  max-width: 600%;
+
+  max-width: 80%;
 }
 #first {
   max-width: 100%;
@@ -20,7 +21,7 @@ header{
   color: black;
   font-family: 'Abril Fatface', cursive !important;
   text-align: center;
-  font-size: xx-large;
+  font-size: large;
   background-color: #E64D2A;
   border: black solid 2px;
   padding: 20px;
@@ -31,17 +32,21 @@ header{
 }
 h1{
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Abril Fatface', cursive !important;
 }
 .resultbox h3{
   color: white;
   font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
 }
 li{
   font-family: 'Open Sans', sans-serif;
 }
 .resultbox{
+  max-width: 100%;
+  max-height: 475px;
+  min-height: 475px;
   background-color: #E64D2A !important;
   color: white !important;
   padding: 20px;
@@ -77,4 +82,5 @@ padding: 5px;
   border: black 2px;
   font-size: 20px
 }
+
 

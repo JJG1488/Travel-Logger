@@ -12,6 +12,7 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// app.use(express.static(__dirname + "public"));
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
 app.use(
@@ -25,6 +26,11 @@ const exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+app.get('/api/ratings', (req, res) => {
+
+  res.render('travelLog');
+})
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
