@@ -7,16 +7,53 @@ const sequelize = require("../config/config");
 
 // Creates a "Ratings" model that matches up with DB
 module.exports = (sequelize, DataTypes) => {
-  const Ratings = sequelize.define("ratings", {
-    nameOfPlace: DataTypes.STRING,
-    visit: DataTypes.BOOLEAN,
-    thumbsUp: DataTypes.BOOLEAN,
-    notes: DataTypes.STRING
+  const Ratings = sequelize.define("Ratings", {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    category: {
+      type: DataTypes.STRING,
+      defaultValue: 'Personal',
+    },
+    nameOfPlace: {
+      type: DataTypes.STRING
+    },
+    visit: {
+      type: DataTypes.BOOLEAN
+    },
+    thumbsUp: {
+      type: DataTypes.BOOLEAN
+    },
+
+    notes: {
+      type: DataTypes.STRING
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("NOW()")
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("NOW()")
+    }
   });
+  // Ratings.sync();
   return Ratings;
+  
 };
 // Syncs with DB
-// Ratings.sync();
+
 
 // Makes the Ratings Model available for other files (will also create a table)
 // module.exports = Ratings;

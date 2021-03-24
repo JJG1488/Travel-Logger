@@ -24,26 +24,41 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("display");
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/recents", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/recents.html"));
-  });
+  // app.get("/recents", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/recents.html"));
+  // });
 
-  app.get("/recommendations", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/recommendations.html"));
-  });
+  // app.get("/recommendations", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/recommendations.html"));
+  // });
 
-  app.get("/search", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/search.html"));
-  });
+  // app.get("/search", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/search.html"));
+  // });
 
-  app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/notes.html"));
-  });
+  // app.get("/notes", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/notes.html"));
+  // });
 
   app.get("/ratings", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/ratings.html"));
+    res.render("travelLog");
+    // res.sendFile(path.join(__dirname, "../public/ratings.html"));
+  });
+
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/blog.html'));
+  });
+
+  app.get('/cms', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/cms.html'));
+  });
+
+  // blog route loads blog.html
+  app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/blog.html'));
   });
 };

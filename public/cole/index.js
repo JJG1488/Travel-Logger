@@ -1,4 +1,3 @@
-
 //Add Search History to Local Storage
 function addToLocalStorage(save_value) {
   let search_key = "search_history";
@@ -68,6 +67,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
+        
         window.location.replace("/members");
         // If there's an error, log the error
       })
