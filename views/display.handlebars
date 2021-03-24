@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <title>Traveler</title>
@@ -9,12 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+ 
     <style type="text/css">
         /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
         #map {
-            height: 100%;
+            min-height: 100vh;
+            max-height: 100vh;
+
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -25,16 +26,7 @@
             padding: 0;
         }
     </style>
-{{!--     
-    <script>
-        let map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8,
-            });
-        }
-    </script> --}}
+   
 </head>
 
 
@@ -43,7 +35,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/logout">
-                   <button>Logout</button>
+                    <button>Logout</button>
                 </a>
                 <hr>
                 <a class="navbar-brand" id="travelLogBtn" href="/ratings">
@@ -69,7 +61,7 @@
                     et
                     dolore
                     magna aliqua. </li>
-              
+
             </div>
 
             <!-- <div class="col-sm-9" id="google"> google
@@ -77,19 +69,22 @@
             </div> -->
         </div>
         <div class="row">
-            <div class="col-sm- resultbox">
+            <div class="col resultbox">
                 <h1>Recent Searches</h1>
                 <div id="recent">
-                    
+
                 </div>
-              
-                
+
+
             </div>
         </div>
     </div>
+    
     <div id="map"></div>
+    
     {{!-- Script below adds geolocation feature --}}
     <script>
+        
         /* Note: This example requires that you consent to location sharing when
          * prompted by your browser. If you see the error "Geolocation permission
          * denied.", it means you probably did not give permission for the browser * to locate you. */
@@ -97,6 +92,7 @@
         /* TODO: Step 2, Geolocate your user
          * Replace the code from here to the END TODO comment with this code
          * from codelab instructions. */
+        var api_key = process.env.API_KEY;
         let pos;
         let map;
         let bounds;
@@ -156,10 +152,10 @@
                 'Error: Your browser doesn\'t support geolocation.');
             infoWindow.open(map);
             currentInfoWindow = infoWindow;
-
             /* TODO: Step 3B3, Call the Places Nearby Search */
         }
-    /* END TODO: Step 2, Geolocate your user */
+
+        /* END TODO: Step 2, Geolocate your user */
         /* TODO: Step 3B1, Call the Places Nearby Search */
     </script>
 
@@ -167,13 +163,15 @@
 
 
 
-
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApBbIwCxsp3GrBlziNjNbTZGWU_mSJwJA&=places&callback=initMap&libraries=&v=weekly"></script>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/display.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&api_key&callback=initMap">
+  </script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {{!--
+    <script type="text/javascript" src="js/display.js"></script> --}}
     <script type="text/javascript" src="cole/index.js"></script>
 </body>
 
-</html>
+
+
+
