@@ -1,4 +1,5 @@
 // Wait for the DOM to completely load before we run our JS
+// eslint-disable-next-line no-unused-vars
 document.addEventListener("DOMContentLoaded", e => {
   console.log("DOM loaded! 🚀");
 
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
   // Get a specific post
   const getPostData = id => {
-    fetch(`/api/ratings/${id}`, {
+    fetch(`/api/posts/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
   // Event handler for when a user submits a post
   const submitPost = post => {
-    fetch("/api/ratings", {
+    fetch("/api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", e => {
       .then(response => response.json())
       .then(data => {
         console.log("Success in submitting post:", data);
-        window.location.href = "/blog.html";
+        window.location.href = "/ratings";
       })
       .catch(error => {
         console.error("Error:", error);
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
   // Update a post and bring user to /blog
   const updatePost = post => {
-    fetch("/api/ratings", {
+    fetch("/api/posts", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", e => {
     })
       .then(() => {
         console.log("Attempting update to post");
-        window.location.href = "/blog";
+        window.location.href = "/ratings";
       })
       .catch(error => {
         console.error("Error:", error);

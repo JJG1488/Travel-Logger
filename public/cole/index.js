@@ -1,17 +1,18 @@
+/* eslint-disable camelcase */
 //Add Search History to Local Storage
 function addToLocalStorage(save_value) {
-  let search_key = "search_history";
-  let search_history = localStorage.getItem(search_key);
+  const search_key = "search_history";
+  const search_history = localStorage.getItem(search_key);
   if (search_history == null) {
-    let new_hist = JSON.stringify([save_value]);
+    const new_hist = JSON.stringify([save_value]);
     localStorage.setItem(search_key, new_hist);
   } else {
     // Grab the value from the history array
-    let past_hist = JSON.parse(search_history);
+    const past_hist = JSON.parse(search_history);
     // Push to the parsed array
     past_hist.unshift(save_value);
     // restring the array
-    let new_hist = JSON.stringify(past_hist);
+    const new_hist = JSON.stringify(past_hist);
     // store it
     localStorage.setItem(search_key, new_hist);
   }
@@ -22,9 +23,9 @@ function showPastHistory() {
   $("#recent").empty();
 
   //slice the search history down to five
-  let recent_search = JSON.parse(localStorage.getItem("search_history"));
+  const recent_search = JSON.parse(localStorage.getItem("search_history"));
   if (recent_search != null) {
-    var recent_hist = recent_search.slice(0, 5);
+    const recent_hist = recent_search.slice(0, 5);
     //print five most recent searches to html
     for (let i = 0; i < recent_hist.length; i++) {
       $("#recent").append(
@@ -33,8 +34,6 @@ function showPastHistory() {
     }
   }
 }
-
-
 
 $(document).ready(() => {
   // Getting references to our form and inputs
@@ -67,7 +66,6 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        
         window.location.replace("/members");
         // If there's an error, log the error
       })
@@ -78,9 +76,9 @@ $(document).ready(() => {
 
   // Display Search History on Load
   showPastHistory();
-  $("#submit_search").click((e) => {
+  $("#submit_search").click(e => {
     e.preventDefault();
-    let search = $("#search").val();
+    const search = $("#search").val();
     addToLocalStorage(search);
     showPastHistory();
     // $("#search").val("");
@@ -95,5 +93,3 @@ $(document).ready(() => {
   //   console.log(city);
   // });
 });
-
-
