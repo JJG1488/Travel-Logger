@@ -84,6 +84,7 @@
     
     {{!-- Script below adds geolocation feature --}}
     <script>
+        var api_key = process.env.API_KEY;
         
         /* Note: This example requires that you consent to location sharing when
          * prompted by your browser. If you see the error "Geolocation permission
@@ -163,15 +164,15 @@
 
 
 
-
-  <--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=&api_key&callback=initMap">
+{{!-- 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=&" + api_key + "&callback=initMap">
   </script>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {{!--
-    <script type="text/javascript" src="js/display.js"></script> --}}
+   
+    <script type="text/javascript" src="js/display.js"></script> 
     <script type="text/javascript" src="cole/index.js"></script>
-</body> -->
+</body>  --}}
 
 
 
@@ -179,7 +180,7 @@
 
 
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&=places&callback=initMap&libraries=&v=weekly"></script>
+        src=`https://maps.googleapis.com/maps/api/js?key=${api_key}&=places&callback=initMap&libraries=&v=weekly`></script>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/display.js"></script>
