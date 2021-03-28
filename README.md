@@ -8,9 +8,9 @@ This application is to help new travelers find different activities to do when e
 
 # Preview
 
-![Preview](./www.preview.png)
+![Preview](./assets/Images/travel-logger.png)
 
-![Link] (https://www.traveler.com)
+![Link] (https://hidden-waters-17740.herokuapp.com/)
 
 ---
 
