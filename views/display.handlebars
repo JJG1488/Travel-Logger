@@ -84,7 +84,6 @@
     
     {{!-- Script below adds geolocation feature --}}
     <script>
-        var api_key = process.env.API_KEY;
         
         /* Note: This example requires that you consent to location sharing when
          * prompted by your browser. If you see the error "Geolocation permission
@@ -93,7 +92,7 @@
         /* TODO: Step 2, Geolocate your user
          * Replace the code from here to the END TODO comment with this code
          * from codelab instructions. */
-        var api_key = process.env.API_KEY;
+        
         let pos;
         let map;
         let bounds;
@@ -175,6 +174,8 @@
 </body>  --}}
 
 
+   <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key={{GAPI_KEY}}&callback=places&callback=initMap&libraries=&v=weekly"></script>
 
 
 
@@ -182,8 +183,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key={{GAPI_KEY}}&=places&callback=initMap&libraries=&v=weekly"></script>
 
+
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/display.js"></script>
     <script type="text/javascript" src="cole/index.js"></script>
 </body>
 
