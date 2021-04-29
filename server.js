@@ -5,6 +5,9 @@ const session = require("express-session");
 const passport = require("./config/passport");
 require('process');
 const fetch = require("node-fetch");
+
+
+var compression = require("compression");
 // const convert = require("xml-js");
 // const rateLimit = require("express-rate-limit");
 // const limiter = rateLimit({
@@ -25,7 +28,9 @@ require("dotenv").config();
 // console.log(process.env);
 
 // Creating express app and configuring middleware needed for authentication
+
 const app = express();
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use(express.static(__dirname + "public"));
@@ -52,6 +57,8 @@ app.set("view engine", "handlebars");
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 require("./routes/api-ratings-routes")(app);
+require("./dist/index")(app);
+
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
